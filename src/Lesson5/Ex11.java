@@ -6,7 +6,7 @@ package Lesson5;
  */
 public class Ex11 {
     public static void main(String[] args) {
-        int n = 247;
+        int n = 13;
         int q;
         String s = "";
         while (n!=0) {
