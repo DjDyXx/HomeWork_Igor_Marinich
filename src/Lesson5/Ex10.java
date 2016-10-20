@@ -7,32 +7,21 @@ package Lesson5;
 public class Ex10 {
     public static void main(String[] args) {
         int n = 15723;
-        int m2 = 0;
-        int res = 0;
-        int res2 = 0;
-        int n2 = n;
-            while (n2 > 0) {
-                int m1 = n2 % 10;
-                if (m1 > m2) {
-                    res = m1;
-                    m2 = m1;
-                } else {
-                    res = m2;
-                }
-                n2 = n2 / 10;
+        int max = 0;
+        int min = 9;
+
+        while (n > 0) {
+            int m = n %10;
+            n = n/10;
+
+            if (m > max) {
+                max = m;
             }
-            while (n > 0) {
-                int m1 = n % 10;
-                if (m1 < m2) {
-                    res2 = m1;
-                    m2 = m1;
-                } else {
-                    res2 = m2;
-                }
-                n = n / 10;
+            if (m < min) {
+                min = m;
             }
-        System.out.println(res);
-        System.out.println(res2);
+        }
+        System.out.println(max + min);
         }
 
     }

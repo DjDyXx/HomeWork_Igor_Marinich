@@ -9,7 +9,7 @@ package Lesson5;
 public class Ex1 {
     public static void main(String[] args) {
         int n=1000;
-        while ((n > 999) && (n < 10000)) {
+        while (n < 10000) {
             System.out.println(n);
             n = n+3;
         }

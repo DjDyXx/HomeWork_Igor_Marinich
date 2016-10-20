@@ -7,16 +7,14 @@ package Lesson5;
 public class Ex9 {
     public static void main(String[] args) {
         int n = 2738;
-        int m2 = 0;
         int max = 0;
 
         while (n > 0) {
             int m1 = n % 10;
-            if (m1 > m2) {
+
+
+            if (m1 > max) {
                 max = m1;
-                m2 = m1;
-            } else {
-                max = m2;
             }
             n = n / 10;
         }

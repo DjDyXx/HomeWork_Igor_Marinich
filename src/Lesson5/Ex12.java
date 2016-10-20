@@ -11,41 +11,23 @@ public class Ex12 {
     public static void main(String[] args) {
         int n1 = 100000;
         int n2 = 999999;
-        int amount;
-        int amount2;
-        int three = 0;
-        int threen = n1;
-        int three1 = 0;
-        int three1n = n1;
         int sum = 0;
-        int sum1 = 0;
-        int mil = 100000;
-        while ((n2+1) > n1) {
-            while (three < 3) {
-                amount = threen % 10;
-                sum = sum + amount;
-                three++;
-                threen = threen / 10;
-            }
-            while (three1 < 3) {
-                amount2 = (three1n / mil) % 10 ;
-                sum1 = sum1 + amount2;
-                three1++;
-                mil = mil/10;
-            }
-            if (sum == sum1) {
+        while (n1 <= n2) {
+            int num1 = n1/100000%10;
+            int num2 = n1/10000%10;
+            int num3 = n1/1000%10;
+            int num4 = n1/100%10;
+            int num5 = n1/10%10;
+            int num6 = n1%10;
+            int sum1 = num1+num2+num3;
+            int sum2 = num4+num5+num6;
+            if (sum1 == sum2) {
                 System.out.println(n1);
+                sum = sum + 1;
             }
             n1++;
-            three = three - 3;
-            three1 = three1 - 3;
-            mil = 100000;
-            threen = n1;
-            three1n = n1;
-            sum = 0;
-            sum1 = 0;
         }
-
+        System.out.println("Сумма билетов = " + sum );
     }
 }
 
