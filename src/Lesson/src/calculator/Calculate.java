@@ -8,9 +8,9 @@ import java.util.Scanner;
 public class Calculate {
     public static int calculator(String getoperation, int operand1) {
         int result = 0;
-        switch (getoperation) {
+        switch (StrOperatation) {
             case "^":
-                result = operand1;
+                result = op1;
                 break;
             case "квадрат":
                 result = operand1*operand1;
