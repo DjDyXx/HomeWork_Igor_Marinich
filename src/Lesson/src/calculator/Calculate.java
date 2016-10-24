@@ -6,27 +6,38 @@ import java.util.Scanner;
  * Created by Игорь on 24.10.2016.
  */
 public class Calculate {
-    public static int calculator(String getoperation, int operand1) {
-        int result = 0;
-        switch (StrOperatation) {
-            case "^":
-                result = op1;
-                break;
+    public static double calculator(String getoperation, int operand1) {
+        double result = 0;
+        switch (getoperation) {
             case "квадрат":
                 result = operand1*operand1;
                 break;
             case "sqrt":
-                result = operand1;
+                result = (int) Math.sqrt(operand1);
                 break;
             case "корень":
-                result = operand1;
+                result = (int) Math.sqrt(operand1);
                 break;
             case "модуль":
-                result = operand1;
+                if(operand1<0) {
+                    result = operand1 * -1;
+                }
                 break;
             case "| |":
-                result = operand1;
+                if(operand1<0){
+                    result = operand1*-1;
+                }
                 break;
+            case "перевод долларов в гривни":
+                result = CurrencyConverter.convert(operand1);
+                break;
+            case "факториал":
+               result = Factorial.calculate(operand1);
+                break;
+            case "шкала Бофорта":
+                Bofort.translate(operand1);
+                break;
+
             default: result = operand1;;
         }
         return result;
@@ -35,23 +46,20 @@ public class Calculate {
     public static int calculator(String getoperation, int operand1 , int operand2) {
         int result = 0;
         switch (getoperation) {
-            case "^":
-                result = operand1;
+            case "+":
+                result = operand1+operand2;
                 break;
-            case "квадрат":
+            case "-":
+                result = operand1-operand2;
+                break;
+            case "/":
+                result = operand1/operand2;
+                break;
+            case "*":
                 result = operand1*operand2;
                 break;
-            case "sqrt":
-                result = operand1;
-                break;
-            case "корень":
-                result = operand1;
-                break;
-            case "модуль":
-                result = operand1;
-                break;
-            case "| |":
-                result = operand1;
+            case "%":
+                result = operand1%operand2;
                 break;
             default: result = operand1;;
         }
