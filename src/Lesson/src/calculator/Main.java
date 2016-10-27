@@ -16,23 +16,22 @@ public class Main {
                 || StrOperatation.equals("квадрат") || StrOperatation.equals("sqrt")
                 || StrOperatation.equals("корень") || StrOperatation.equals("модуль") || StrOperatation.equals("| |")
                 || StrOperatation.equals("перевод долларов в гривни")
-                || StrOperatation.equals("факториал") || StrOperatation.equals("шкала Бофорта")){
+                || StrOperatation.equals("факториал") || StrOperatation.equals("шкала Бофорта")) {
 
 
-            if(Calculate.calculator(StrOperatation, op1) == 0) {
+            if (Calculate.calculator(StrOperatation, op1) == 0) {
                 System.out.println("Конец программы.");
-            }else
-            {
+            } else {
                 System.out.println("Результат = " + Calculate.calculator(StrOperatation, op1));
                 System.out.println("Конец программы.");
             }
 
 
-            }else{
+        } else {
             System.out.println("Введите второй операнд :");
-            int op2 =  Input.getOperand2();
-            System.out.println("Результат = " + Calculate.calculator(StrOperatation,op1,op2));
+            int op2 = Input.getOperand2();
+            System.out.println("Результат = " + Calculate.calculator(StrOperatation, op1, op2));
             System.out.println("Конец программы.");
-            }
+        }
     }
 }

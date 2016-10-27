@@ -6,7 +6,7 @@ package calculator;
 public class Factorial {
     public static int calculate(int operand1){
         int result = 1;
-        if (!(operand1 <=0)) {
+        if (operand1>0) {
             int n = operand1;
             while (n >= 1) {
                 result = result * n;
