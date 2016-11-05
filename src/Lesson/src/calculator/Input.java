@@ -27,13 +27,13 @@ public class Input {
         boolean result = false;
         while (!result) {
             if (getoperation.equals("квадрат") || getoperation.equals("sqrt")
-                    || getoperation.equals ("корень") || getoperation.equals ("модуль") || getoperation.equals("| |")
-                    || getoperation.equals("+")|| getoperation.equals("-")|| getoperation.equals("*")|| getoperation.equals("/")
-                    || getoperation.equals("%")|| getoperation.equals("поделить")|| getoperation.equals("умножить")|| getoperation.equals("найти остаток")
-                    || getoperation.equals("минус")|| getoperation.equals("плюс")|| getoperation.equals("факториал")|| getoperation.equals("перевод долларов в гривни")||
+                    || getoperation.equals("корень") || getoperation.equals("модуль") || getoperation.equals("| |")
+                    || getoperation.equals("+") || getoperation.equals("-") || getoperation.equals("*") || getoperation.equals("/")
+                    || getoperation.equals("%") || getoperation.equals("поделить") || getoperation.equals("умножить") || getoperation.equals("найти остаток")
+                    || getoperation.equals("минус") || getoperation.equals("плюс") || getoperation.equals("факториал") || getoperation.equals("перевод долларов в гривни") ||
                     getoperation.equals("шкала Бофорта")) {
                 result = true;
-            }else{
+            } else {
                 System.out.println("Вы ввели не правильно. Попробуйте ещё раз : ");
                 getoperation = getoper.next();
             }
