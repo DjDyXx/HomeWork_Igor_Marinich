@@ -34,6 +34,9 @@ public class Cart {
         } else {
             count--;
             products[id] = null;
+            for(int k=id; k<count;k++){
+                products[k] = products[k+1];
+            }
         }
     }
 

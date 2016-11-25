@@ -22,7 +22,7 @@ public class Shop {
         cart1.showAll();
 
         cart1.removeProduct(2);
-
+        System.out.println();
         cart1.showAll();
 
     }
